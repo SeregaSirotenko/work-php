@@ -1,4 +1,3 @@
-
 <?php
 $myNews = [
 			0 => [
@@ -102,49 +101,35 @@ $myNews = [
 
 </style>
 <div class="myNews">
-<?php foreach ($myNews as $item):?>
+<?php foreach ($myNews as $item): ?>
 	<div class="item">
 		<div class="title news">
-			<span>
-			<?=$item['title']?>
-			</span>
+			<span><?= $item['title']; ?></span>
 		</div>
 	</div>
 	<div class="item">
 		<div class="description news">
-			<span>
-			<?=$item['description']?>
-			</span>
+			<span><?= $item['description']; ?></span>
 		</div>
 	</div>
 	<div class="item">
 		<div class="view news">
-			<span>
-			Просмотров: <?=$item['view']?>
-			</span>
-			<span>
-				Комментариев: <?=count($item['comments'])?>
-			</span>
+			<span>Просмотров: <?= $item['view']; ?></span>
+			<span>Комментариев: <?= count($item['comments']); ?></span>
 		</div>
 	</div>
-	<?php foreach ($item['comments'] as $value):?>
+	<?php foreach ($item['comments'] as $value): ?>
 			<div class="item">
 				<div class="author news">
-					<span>
-						Автор комментария: <?=$value['author']?>
-					</span>
-					<span>
-						Дата комментария: <?=$value['date']?>
-					</span>
+					<span>Автор комментария: <?= $value['author']; ?></span>
+					<span>Дата комментария: <?= $value['date']; ?></span>
 				</div>
 			</div>
 			<div class="item">
 				<div class="comments news">
-					<span>
-						<?=$value['message']?>
-					</span>
+					<span><?= $value['message']; ?></span>
 				</div>
 			</div>
-		<?endforeach;?>
-<?endforeach;?>
+		<?php endforeach;?>
+<?php endforeach;?>
 </div>
