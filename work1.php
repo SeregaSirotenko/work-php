@@ -1,64 +1,6 @@
 <?php
-$myNews = [
-            0 => [
-                    'title' => 'Заголовок новости',
-                    'description' => 'Содержимое новости',
-                    'view' => 5,
-                    'id' => 'Уникальный номер',
-                    'date' => date("d-m-Y H:i:s"),
-                    'comments' => [ 
-                                    0 => [
-                                            'author' => 'Ник автора', 
-                                            'date' => date("d-m-Y H:i:s"),
-                                            'message' => 'Текст комментария'],
-                                    1 => [
-                                            'author' => 'Ник автора', 
-                                            'date' => date("d-m-Y H:i:s"),
-                                            'message' => 'Текст комментария'],
-                                    2 => [
-                                            'author' => 'Ник автора', 
-                                            'date' => date("d-m-Y H:i:s"),
-                                            'message' => 'Текст комментария']]],        
-            1 => [
-                    'title' => 'Заголовок новости',
-                    'description' => 'Содержимое новости',
-                    'view' => 5,
-                    'id' => 'Уникальный номер',
-                    'date' => date("d-m-Y H:i:s"),
-                    'comments' => [ 
-                                    0 => [
-                                            'author' => 'Ник автора', 
-                                            'date' => date("d-m-Y H:i:s"),
-                                            'message' => 'Текст комментария'],
-                                    1 => [
-                                            'author' => 'Ник автора', 
-                                            'date' => date("d-m-Y H:i:s"),
-                                            'message' => 'Текст комментария'],
-                                    2 => [
-                                            'author' => 'Ник автора', 
-                                            'date' => date("d-m-Y H:i:s"),
-                                            'message' => 'Текст комментария']]],
-            2 => [
-                    'title' => 'Заголовок новости',
-                    'description' => 'Содержимое новости',
-                    'view' => 5,
-                    'id' => 'Уникальный номер',
-                    'date' => date("d-m-Y H:i:s"),
-                    'comments' => [ 
-                                    0 => [
-                                            'author' => 'Ник автора', 
-                                            'date' => date("d-m-Y H:i:s"),
-                                            'message' => 'Текст комментария'],
-                                    1 => [
-                                            'author' => 'Ник автора', 
-                                            'date' => date("d-m-Y H:i:s"),
-                                            'message' => 'Текст комментария'],
-                                    2 => [
-                                            'author' => 'Ник автора', 
-                                            'date' => date("d-m-Y H:i:s"),
-                                            'message' => 'Текст комментария']]]];
-//echo '<pre>'; print_r($myNews);
-
+header("content-type: text/html; charset=utf-8");
+require 'lib.inc.php';
 ?>
 <style>
     .myNews {
@@ -83,7 +25,7 @@ $myNews = [
     }
 
     .myNews .newsItem .item .title{
-        width: 160px;
+        width: 170px;
     }
 
     .myNews .newsItem .item .news{
@@ -94,19 +36,19 @@ $myNews = [
     }
 
     .myNews .newsItem .item .description{
-        width: 180px;
+        width: 190px;
     }
-    
+
     .myNews .newsItem .item .view{
-        width: 250px;
+        width: 260px;
     }
-    
+
     .myNews .newsItem .item .author{
-        width: 520px;
+        width: 530px;
     }
 
     .myNews .newsItem .item .comments{
-        width: 155px;
+        width: 165px;
     }
 
 </style>
