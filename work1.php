@@ -1,5 +1,5 @@
 <?php
-header("content-type: text/html; charset=utf-8");
+header("Content-type: text/html; charset=utf-8");
 require 'lib.inc.php';
 ?>
 <style>
@@ -21,10 +21,10 @@ require 'lib.inc.php';
         border: 2px solid black;
         margin-top: 15px;
         margin-bottom: 15px;
-        margin-left: 48px;
+        margin-left: 24px;
     }
 
-    .myNews .newsItem .item .title{
+    .myNews .newsItem .newsCell .item .title{
         width: 170px;
     }
 
@@ -35,26 +35,38 @@ require 'lib.inc.php';
         text-align: center;
     }
 
-    .myNews .newsItem .item .description{
+    .myNews .newsItem .newsCell .item .description{
         width: 190px;
     }
 
-    .myNews .newsItem .item .view{
+    .myNews .newsItem .newsCell .item .view{
         width: 260px;
     }
 
-    .myNews .newsItem .item .author{
+    .myNews .newsItem .commentCell .item .author{
         width: 530px;
     }
 
-    .myNews .newsItem .item .comments{
+    .myNews .newsItem .commentCell .item .comments{
         width: 165px;
+    }
+
+    .myNews .newsItem .cell{
+        border: 2px solid green;
+        width: 950px;
+        margin: 0 auto;
+        margin-top: 12px;
+    }
+
+    .myNews .newsItem .commentCell{
+        margin-bottom: 12px;
     }
 
 </style>
 <div class="myNews">
 <?php foreach ($myNews as $item): ?>
     <div class="newsItem">
+    <div class="newsCell cell">
     <div class="item">
         <div class="title news">
             <span><?= $item['title']; ?></span>
@@ -71,6 +83,8 @@ require 'lib.inc.php';
             <span>Комментариев: <?= count($item['comments']); ?></span>
         </div>
     </div>
+    </div>
+    <div class="commentCell cell">
     <?php foreach ($item['comments'] as $value): ?>
             <div class="item">
                 <div class="author news">
@@ -84,6 +98,7 @@ require 'lib.inc.php';
                 </div>
             </div>
         <?php endforeach;?>
+        </div>
         </div>
 <?php endforeach;?>
 </div>
